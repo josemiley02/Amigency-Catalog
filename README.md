@@ -1,5 +1,3 @@
-
-```markdown
 # 🎀 Amigency Catalog – Modern Product Showcase Platform
 
 ClayEarrings Catalog is a lightweight and modern web application built for a handmade cold-porcelain (air-dry clay) jewelry business.  
@@ -44,31 +42,6 @@ This project was designed with accessibility and offline stability in mind, ensu
 - **Axios** – HTTP client to interact with the backend API.
 - **Pinia** (optional) – State management.
 - Clean and reusable component architecture.
-
----
-
-## 📦 Folder Structure
-
-```
-
-catalog/
-│
-├── backend/
-│   ├── core/            # Django project settings
-│   ├── products/        # Product & category models, views, serializers
-│   ├── media/           # Uploaded images
-│   └── ...              # Migrations, admin, API routes
-│
-└── frontend/
-├── src/
-│   ├── components/  # Vue components (catalog grid, product cards...)
-│   ├── pages/       # Views
-│   ├── api/         # Axios config and endpoints
-│   └── store/       # Pinia stores (if used)
-└── ...
-
-````
-
 ---
 
 ## 🚀 Getting Started
@@ -129,17 +102,3 @@ MIT License — free to use, improve, and customize.
 ## 💖 Credits
 
 Built with love for a handmade cold-porcelain jewelry business, focusing on creativity, simplicity, and accessibility.
-
-```
-
----
-
-Si quieres, puedo añadirme también:
-
-✅ captura de pantalla del catálogo  
-✅ badge de tecnologías  
-✅ instrucciones de despliegue con Nginx y Docker  
-✅ versión en español  
-
-Solo dime y lo preparo.
-```
