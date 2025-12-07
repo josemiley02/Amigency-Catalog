@@ -30,6 +30,18 @@ body {
   min-height: 100vh;
 }
 
+/* Evitar centrado vertical incómodo en móviles: hacer flujo normal */
+@media (max-width: 768px) {
+  body {
+    display: block;
+    padding: 0 0.5rem;
+  }
+
+  #app {
+    padding: 1rem;
+  }
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

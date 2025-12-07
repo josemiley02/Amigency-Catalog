@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <h1>Password</h1>
         <PassVerify />
     </div>

@@ -60,6 +60,13 @@
   box-sizing: border-box;
 }
 
+/* Imágenes y multimedia responsivas */
+img, picture, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -395,6 +402,34 @@ label {
 
   .grid-2, .grid-3 {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Pequeños ajustes para pantallas muy estrechas (móviles) */
+@media (max-width: 480px) {
+  :root {
+    --spacing-sm: 0.4rem;
+    --spacing-md: 0.75rem;
+    --spacing-lg: 1rem;
+  }
+
+  .btn, button {
+    width: 100%;
+    padding: var(--spacing-md);
+    font-size: var(--font-size-base);
+  }
+
+  .card {
+    padding: var(--spacing-md);
+  }
+
+  .preview-image, .product-image {
+    height: 160px;
+  }
+
+  .file-input-wrapper {
+    padding: var(--spacing-md);
+    min-height: 100px;
   }
 }
 

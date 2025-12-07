@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>Panel de Administración</h1>
     <ProductForm />
   </div>
