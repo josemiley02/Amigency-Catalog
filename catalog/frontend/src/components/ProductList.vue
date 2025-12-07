@@ -73,6 +73,7 @@ import { ref, onMounted, computed, inject } from 'vue'
 import { getProducts } from '../api/products'
 import type { Product } from '../types/products'
 
+
 const products = ref<Product[]>([])
 const loading = ref(true)
 const error = ref<string | null>(null)
@@ -136,7 +137,25 @@ onMounted(() => {
 
 <style scoped>
 .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15;
+  justify-content: center;
+  padding: 20px;
   animation: fadeIn 0.5s ease-out;
+}
+
+.image-wraper{
+  width: 200px;
+  height:150px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loading-container {

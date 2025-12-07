@@ -1,53 +1,75 @@
 <script setup lang="ts">
-import { ref, provide } from 'vue'
+import { ref, provide, onMounted, onUnmounted } from 'vue'
 import CatalogView from './views/CatalogView.vue'
 import AdminView from './views/AdminView.vue'
+import PassVerificationView from './views/PassVerificationView.vue'
+import { isSamy } from './stores/adminStore'
+ // IMPORTANTE
 
-const activeTab = ref<'catalog' | 'admin'>('catalog')
+const activeTab = ref<'catalog' | 'admin' | 'check'>('catalog')
 const searchQuery = ref('')
+const showHeader = ref(true)
+let lastScrollY = 0
 
-// Proporcionar el query de búsqueda a los componentes hijos
+// -------- SCROLL HEADER LOGIC --------
+const handleScroll = () => {
+  const currentScrollY = window.scrollY
+  if (currentScrollY < lastScrollY || currentScrollY < 100) {
+    showHeader.value = true
+  } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+    showHeader.value = false
+  }
+  lastScrollY = currentScrollY
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+
+// Proveer búsqueda al catálogo
 provide('searchQuery', searchQuery)
 </script>
 
 <template>
   <div class="app-container">
-    <!-- Background placeholder -->
-    <div class="background-container"></div>
 
-    <!-- Header -->
-    <header class="app-header">
+    <!-- HEADER -->
+    <header :class="{ 'header-hidden': !showHeader }" class="app-header">
       <div class="container">
+
         <div class="header-content">
           <div class="logo-section">
             <div class="logo-icon">✨</div>
             <div>
               <h1>Amigency ❤️💙</h1>
-              <p class="subtitle">Joyería elegante y delicada</p>
+              <p class="subtitle">Lleva contigo ese arete que siempre soñaste</p>
             </div>
           </div>
-          
+
           <nav class="nav-tabs">
             <button 
               class="tab-button" 
               :class="{ active: activeTab === 'catalog' }"
               @click="activeTab = 'catalog'"
             >
-              <span class="tab-icon">🛍️</span>
-              <span class="tab-label">Catálogo</span>
+              🛍️ <span class="tab-label">Catálogo</span>
             </button>
+
             <button 
               class="tab-button" 
-              :class="{ active: activeTab === 'admin' }"
-              @click="activeTab = 'admin'"
+              :class="{ active: activeTab === 'check' }"
+              @click="activeTab = 'check'"
             >
-              <span class="tab-icon">✨</span>
-              <span class="tab-label">Agregar</span>
+              ✨ <span class="tab-label">Agregar</span>
             </button>
           </nav>
         </div>
 
-        <!-- Search bar (solo en catálogo) -->
+        <!-- SEARCH BAR -->
         <div v-if="activeTab === 'catalog'" class="search-section">
           <div class="search-wrapper">
             <span class="search-icon">🔍</span>
@@ -55,33 +77,52 @@ provide('searchQuery', searchQuery)
               v-model="searchQuery"
               type="text"
               class="search-input"
-              placeholder="Busca aretes... (Ej: Amapola, Flor, Dorado)"
-              @input="$emit('search')"
+              placeholder="Busca aretes..."
             />
             <button 
               v-if="searchQuery" 
               class="clear-search"
               @click="searchQuery = ''"
-            >
-              ✕
-            </button>
+            >✕</button>
           </div>
-          <p v-if="searchQuery" class="search-hint">Buscando: <strong>{{ searchQuery }}</strong></p>
+
+          <p 
+            v-if="searchQuery" 
+            class="search-hint"
+          >Buscando: <strong>{{ searchQuery }}</strong></p>
         </div>
+
       </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
     <main class="app-main">
       <div class="container">
+
         <transition name="fade" mode="out-in">
-          <CatalogView v-if="activeTab === 'catalog'" key="catalog" />
-          <AdminView v-else-if="activeTab === 'admin'" key="admin" />
+          <!-- Catálogo -->
+          <CatalogView 
+            v-if="activeTab === 'catalog'" 
+            key="catalog" 
+          />
+
+          <!-- Pantalla de password -->
+          <PassVerificationView 
+            v-else-if="activeTab === 'check' && isSamy === false" 
+            key="check"
+          />
+
+          <!-- Admin SOLO SI la contraseña fue correcta -->
+          <AdminView 
+            v-else-if="isSamy === true && activeTab === 'check'"
+            key="admin" 
+          />
         </transition>
+
       </div>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="app-footer">
       <div class="container">
         <div class="footer-content">
@@ -91,20 +132,24 @@ provide('searchQuery', searchQuery)
           </div>
           <div class="footer-section">
             <h4>Contacto</h4>
-            <p>📧 info@aretescelestiales.com<br>📱 +1 (555) 123-4567</p>
+            <p>📧 info@aretes.com<br>📱 +53 63218216</p>
           </div>
           <div class="footer-section">
             <h4>Redes Sociales</h4>
-            <p>Instagram • Facebook • Pinterest</p>
+            <p>Instagram • Facebook</p>
           </div>
         </div>
+
         <div class="footer-bottom">
           <p>&copy; 2025 Aretes Celestiales. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
+
   </div>
 </template>
+
+
 
 <style scoped>
 .app-container {
@@ -117,6 +162,7 @@ provide('searchQuery', searchQuery)
 
 .app-header {
   background: linear-gradient(135deg, rgba(245, 163, 199, 0.95), rgba(180, 212, 255, 0.95));
+  position: fixed;
   backdrop-filter: blur(10px);
   padding: var(--spacing-xl) 0;
   box-shadow: var(--shadow-lg);
@@ -124,6 +170,11 @@ provide('searchQuery', searchQuery)
   top: 0;
   z-index: 100;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.app-header.header-hidden{
+  transform: translateY(-100%);
 }
 
 .header-content {

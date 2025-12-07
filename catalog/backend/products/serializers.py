@@ -24,3 +24,12 @@ class CreateProductSerializer(serializers.ModelSerializer):
         if value <= 0:
             raise serializers.ValidationError("Price must be a positive number.")
         return value
+
+# class GetProductSerializer(serializers.ModelSerializer):
+#     id = serializers.IntegerField()
+#     class Meta:
+#         model = Product
+#         fields = ['id']
+    
+#     def get(self, instance):
+#         return instance

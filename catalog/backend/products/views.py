@@ -4,6 +4,7 @@ from rest_framework import status
 
 from .models import Product, ProductCategory
 from .serializers import (
+    #GetProductSerializer,
     ProductSerializer,
     CreateProductSerializer,
     ProductCategorySerializer
@@ -29,3 +30,17 @@ class CategoryListView(APIView):
         categories = ProductCategory.objects.all()
         serializer = ProductCategorySerializer(categories, many=True)
         return Response(serializer.data)
+
+# class GetProductView(APIView):
+#     def get(self, request):
+#         product_id = request.data.get('id')
+#         if not product_id:
+#             return Response({"error": "id required"}, status=400)
+#         try:
+#             product = Product.objects.get(id=product_id)
+#         except Product.DoesNotExist:
+#             return Response({"error": "Product not found"})
+        
+#         serializer = GetProductSerializer( instance= product, data= request.data)
+#         serializer.is_valid(raise_exception=True)
+#         return Response(serializer.data)
