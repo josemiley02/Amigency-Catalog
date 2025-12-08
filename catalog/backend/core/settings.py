@@ -140,3 +140,16 @@ import os
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Static files configuration for production (Render)
+# ----------------------------------------------------------------------
+# Donde Django debe COPIAR todos los estáticos para servirlos
+# Esto crea una carpeta llamada 'staticfiles' en la raíz del proyecto.
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Directorios ADICIONALES donde Django debe BUSCAR estáticos
+# Apunta a la carpeta 'dist' generada por el build de Vue
+STATICFILES_DIRS = [
+    BASE_DIR / 'frontend' / 'dist',
+]
+# ----------------------------------------------------------------------
