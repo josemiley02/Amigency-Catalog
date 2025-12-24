@@ -10,11 +10,26 @@
 
 @theme {  
     --font-catalogo-nunito: "Nunito", "sans-serif"; 
-    --color-soft-blue-green: hsl(140.909, 100%, 87%);
-    --color-intense-rose: hsl(323, 100%, 77%);
-    --color-dark-purple: hsl(271, 100%, 20%);
-    --color-grayish-blue: hsl(210, 16%, 82%);
-    --color-soft-purple: hsl(271, 100%, 85%);
+    --color-pastel-mint: hsl(170, 75%, 75%);
+    --color-pastel-pink: hsl(355, 85%, 75%);
+    --color-pastel-blue: hsl(210, 85%, 75%);
+    --color-pastel-peach: hsl(35, 85%, 78%);
+    --color-soft-white: hsl(0, 0%, 98%);
+    --color-bg-app: hsl(170, 60%, 90%);
+    --color-accent-dark: hsl(200, 60%, 30%);
+    --color-text-dark: hsl(0, 0%, 20%);
+}
+
+/* 
+  FONDO DE LA APLICACIÓN
+  Cambiar --color-bg-app por un url() para usar imagen de fondo:
+  background-image: url('path/to/image.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+*/
+body {
+    background-color: var(--color-bg-app);
+    /* background-image: url(''); */ /* Descomenta para usar imagen de fondo */
 }
 
 .margin-responsive{
@@ -22,9 +37,9 @@
 }
 
 .category-button{
-    @apply bg-dark-purple text-white font-bold px-4 py-1 rounded-2xl border-3 border-dark-purple cursor-pointer
+    @apply bg-pastel-mint text-accent-dark font-bold px-4 py-1 rounded-2xl border-3 border-pastel-mint cursor-pointer hover:border-pastel-blue transition-colors
 }
 
 .active{
-    @apply bg-soft-blue-green text-dark-purple;
+    @apply bg-pastel-mint text-accent-dark;
 }

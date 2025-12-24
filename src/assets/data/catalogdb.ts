@@ -26,19 +26,19 @@ export const catalogDb = {
         {
             id: '04',
             name: 'Estrella de Mar',
-            price: '300',
+            price: '700',
             urlImg: `${import.meta.env.BASE_URL}images/shop/combos/estrella_mar.jpeg`
         },
         {
             id: '05',
             name: 'Flores Rosadas',
-            price: '300',
+            price: '700',
             urlImg: `${import.meta.env.BASE_URL}images/shop/combos/flores_rosadas.jpeg`
         },
         {
             id: '06',
             name: 'Girasoles',
-            price: '300',
+            price: '700',
             urlImg: `${import.meta.env.BASE_URL}images/shop/combos/girasoles.jpeg`
         },
     ]
