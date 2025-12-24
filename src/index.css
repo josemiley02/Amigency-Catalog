@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@font-face {  
+    font-family: "Nunito";  
+    font-style: normal;  
+    font-weight: 400 700;  
+    font-display: swap;  
+    src: url("/fonts/Nunito-VariableFont_wght.ttf") format("ttf");
+}
+
+@theme {  
+    --font-catalogo-nunito: "Nunito", "sans-serif"; 
+    --color-soft-blue-green: hsl(140.909, 100%, 87%);
+    --color-intense-rose: hsl(323, 100%, 77%);
+    --color-dark-purple: hsl(271, 100%, 20%);
+    --color-grayish-blue: hsl(210, 16%, 82%);
+    --color-soft-purple: hsl(271, 100%, 85%);
+}
+
+.margin-responsive{
+    @apply sm:mx-10 md:mx-20 lg:mx-30
+}
+
+.category-button{
+    @apply bg-dark-purple text-white font-bold px-4 py-1 rounded-2xl border-3 border-dark-purple cursor-pointer
+}
+
+.active{
+    @apply bg-soft-blue-green text-dark-purple;
+}
