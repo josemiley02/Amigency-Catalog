@@ -5,7 +5,8 @@ import { Jewel } from "./jewel";
 
 export const CatalogList = ({productList}: CatalogListProps) => {
     return(
-        <div>
+        <div className="grid grid-cols-2 justify-center gap-x-6 gap-y-8
+        md:grid-cols-3">
             {productList.map((item)=>{
                 return(
                     <Jewel
