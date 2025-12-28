@@ -6,11 +6,11 @@ export const Header = () => {
             </figure>
 
             <div className="flex gap-2 relative">
-                <a href="#" target="_BLANK">
-                    <span className="inline-block size-4 bg-cover bg-[url(./images/icons/instagram.svg)]"></span>
+                <a href="https://www.instagram.com/amigency.sa?igsh=bDJpaWFkNTNpa21h" target="_BLANK">
+                    <span className="inline-block size-4 bg-cover bg-[url(./images/icons/instagram.webp)]"></span>
                 </a>
-                <a href="#" target="_BLANK">
-                    <span className="inline-block size-5 relative -botton-1 bg-cover bg-[url(./images/icons/whatsapp.svg)]"></span>
+                <a href="https://chat.whatsapp.com/JdDieBGZJyGGKZMlrD89GF?mode=hqrt2" target="_BLANK">
+                    <span className="inline-block size-5 relative -botton-1 bg-cover bg-[url(./images/icons/whatsapp.webp)]"></span>
                </a>
                 <span className="absolute w-[130%] h-2 bg-pastel-mint bottom -1/2 right-1/2 translate-1/2 -z-1 rounded-md"></span>
             </div>

@@ -255,3 +255,9 @@ Para mantener consistencia futura:
 **Fin del documento de cambios**
 
 Para más información o reportar problemas, consulta al equipo de desarrollo.
+
+
+# TODO
+1. Emoji rojo y azul en Nuestros Productos
+2. Enlaces de Instagram y Whatsapp
+3. Logo

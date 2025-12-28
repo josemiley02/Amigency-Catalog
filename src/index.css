@@ -11,12 +11,12 @@
 @theme {  
     --font-catalogo-nunito: "Nunito", "sans-serif"; 
     --color-pastel-mint: hsl(170, 75%, 75%);
-    --color-pastel-pink: hsl(355, 85%, 75%);
+    --color-pastel-pink: hsl(355, 100%, 50%);
     --color-pastel-blue: hsl(210, 85%, 75%);
     --color-pastel-peach: hsl(35, 85%, 78%);
     --color-soft-white: hsl(0, 0%, 98%);
-    --color-bg-app: hsl(170, 60%, 90%);
-    --color-accent-dark: hsl(200, 60%, 30%);
+    --color-blue-cyan: hsl(170, 60%, 90%);
+    --color-accent-dark: hsl(355, 100%, 50%);
     --color-text-dark: hsl(0, 0%, 20%);
 }
 
@@ -28,7 +28,7 @@
   background-attachment: fixed;
 */
 body {
-    background-color: var(--color-bg-app);
+    background-color: var(--color-soft-white);
     /* background-image: url(''); */ /* Descomenta para usar imagen de fondo */
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .category-button{
-    @apply bg-pastel-mint text-accent-dark font-bold px-4 py-1 rounded-2xl border-3 border-pastel-mint cursor-pointer hover:border-pastel-blue transition-colors
+    @apply bg-blue-cyan text-accent-dark font-bold px-4 py-1 rounded-2xl border-3 border-pastel-blue cursor-pointer hover:border-pastel-blue transition-colors
 }
 
 .active{
