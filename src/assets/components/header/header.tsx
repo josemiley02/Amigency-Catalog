@@ -1,6 +1,6 @@
-import logo from './images/logo.webp';
-import instagramIcon from './images/icons/instagram.webp';
-import whatsappIcon from './images/icons/whatsapp.webp';
+import logo from '../../../../public/images/logo.webp';
+import instagramIcon from '../../../../public/images/icons/instagram.webp';
+import whatsappIcon from '../../../../public/images/icons/whatsapp.webp';
 export const Header = () => {
     return (
         <header className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between sm:items-end sm: mx-10">
