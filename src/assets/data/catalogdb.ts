@@ -290,7 +290,18 @@ export const catalogDb = {
         },
     ],
     collares:[
-
+        {
+            id: '01',
+            name: 'Sirena',
+            price: '$500',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/collares/sirena.jpeg`
+        },
+        {
+            id: '02',
+            name: 'Caribe',
+            price: '$500',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/collares/caribe.jpeg`
+        },
     ],
     combos:[
         {

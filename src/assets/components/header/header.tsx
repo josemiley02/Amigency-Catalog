@@ -5,7 +5,7 @@ export const Header = () => {
     return (
         <header className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between sm:items-end sm: mx-10">
             <figure className="w-45">
-                <img width="451" height="204" src={logo} alt="Logo de Amigency"></img>
+                <img width="1000" height="1000" src={logo} alt="Logo de Amigency"></img>
             </figure>
 
             <div className="flex gap-2 relative">

@@ -7,7 +7,7 @@ export const Main = () => {
     return(
         <section className="py-4 margin-responsive px-4">
             <h1 className="text-2xl font-bold text-center mb-4 text-accent-dark">
-                Nuestros Productos ✨
+                Nuestros Productos 💙❤️
             </h1>
             <div className="flex flex-col-reverse items-center gap-4 mb-4">
                 <nav className="relative flex justify-between gap-2 w-full">
