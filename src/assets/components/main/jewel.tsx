@@ -1,6 +1,6 @@
 import type { Product } from "./interfaces"
 
-export const Jewel = ({id, name, urlImg, price, keywords}: Product) => {
+export const Jewel = ({id, name, urlImg, price}: Product) => {
     return(
         <div className="bg-blue-cyan relative pb-4 text-center rounded-lg" id={urlImg + id}>
             <figure className="bg-soft-white mb-2 border-2 border-pastel-pink rounded-lg overflow-hidden">

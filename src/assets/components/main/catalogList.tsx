@@ -15,6 +15,7 @@ export const CatalogList = ({productList}: CatalogListProps) => {
                     name={item.name}
                     urlImg={item.urlImg}
                     price={item.price}
+                    keywords={item.keywords}
                     ></Jewel>
                 )
             })}
