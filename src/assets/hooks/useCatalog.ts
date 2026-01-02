@@ -14,7 +14,7 @@ export const useCatalog = () => {
         if (useSearch) {
             const filtered: Product[] = [];
             for (const key in catalogDb) {
-                const matches = catalogDb[key as keyof typeof catalogDb].filter(item => item.name.toLowerCase().includes(useSearch))
+                const matches = catalogDb[key as keyof typeof catalogDb].filter(item => item.name.toLowerCase().includes(useSearch) || item.keywords.toLocaleLowerCase().includes(useSearch))
                 if (matches.length > 0) {
                     matches.forEach(match => filtered.push(match))
                 }
@@ -24,6 +24,7 @@ export const useCatalog = () => {
             if (category === 1) return catalogDb.aretes;
             else if (category === 2) return catalogDb.collares;
             else return catalogDb.combos;
+            //else return catalogDb.pulsos;
         }
     }, [query, category])
 

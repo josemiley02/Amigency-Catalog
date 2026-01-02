@@ -15,6 +15,7 @@ export const Main = () => {
                     <Button handleClick={()=>onClickCategory(1)} classActive={category==1 ? 'active' : ''}>Aretes</Button>
                     <Button handleClick={()=>onClickCategory(2)} classActive={category==2 ? 'active' : ''}>Collares</Button>
                     <Button handleClick={()=>onClickCategory(3)} classActive={category==3 ? 'active' : ''}>Combos</Button>
+                    {/* <Button handleClick={()=>onClickCategory(4)} classActive={category==4 ? 'active' : ''}>Pulsos</Button> */}
                     <span className="absolute w-full h-3 bg-blue-cyan -z-1 translate-y-1/2"></span>
                 </nav>
 

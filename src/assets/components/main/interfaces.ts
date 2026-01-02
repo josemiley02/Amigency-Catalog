@@ -3,6 +3,7 @@ export interface Product{
     name: string;
     price: string;
     urlImg: string;
+    keywords: string;
 }
 
 export interface CatalogListProps{
