@@ -365,6 +365,46 @@ export const catalogDb = {
             keywords: 'amarillo flor miel abeja sol pequeño simple sencillo'
 
         },
+        {
+            id: '48',
+            name: 'Campanillas',
+            price: '$300',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/aretes/campanillas.jpeg`,
+            keywords: 'amarillo flor miel abeja sol pequeño simple sencillo'
+
+        },
+        {
+            id: '49',
+            name: 'Flor Blanca Rara',
+            price: '$300',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/aretes/flor_blanca_rara.jpeg`,
+            keywords: 'amarillo flor miel abeja sol pequeño simple sencillo'
+
+        },
+        {
+            id: '50',
+            name: 'Flor Roja Centro Amarillo',
+            price: '$300',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/aretes/flor_roja_centro_amarillo.jpeg`,
+            keywords: 'amarillo flor miel abeja sol pequeño simple sencillo'
+
+        },        
+        {
+            id: '51',
+            name: 'Melon Silvestre',
+            price: '$300',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/aretes/melon_2.jpeg`,
+            keywords: 'amarillo flor miel abeja sol pequeño simple sencillo'
+
+        },
+        {
+            id: '52',
+            name: 'Orquidea Morada',
+            price: '$300',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/aretes/orquidea_morada.jpeg`,
+            keywords: 'flor jardin paraiso purpura amarillo stranger things'
+
+        },
     ],
     collares:[
         {
@@ -380,6 +420,34 @@ export const catalogDb = {
             price: '$500',
             urlImg: `${import.meta.env.BASE_URL}images/shop/collares/caribe.jpeg`,
             keywords: 'mar pez concha océano sirena cola agua'
+        },
+        {
+            id: '03',
+            name: 'Girasoles',
+            price: '$500',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/collares/girasoles.jpeg`,
+            keywords: 'flor amarillo silvestre pequeño centro tres'
+        },
+        {
+            id: '04',
+            name: 'Estrella de Mar',
+            price: '$500',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/collares/estrella_mar.jpeg`,
+            keywords: 'flor amarillo silvestre pequeño centro tres mar pez concha océano sirena cola agua'
+        },
+        {
+            id: '05',
+            name: 'Estrella de Mar',
+            price: '$500',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/collares/girasoles.jpeg`,
+            keywords: 'flor amarillo silvestre pequeño centro tres mar pez concha océano sirena cola agua'
+        },
+        {
+            id: '06',
+            name: 'Flores Perladas',
+            price: '$500',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/collares/flor_perlas.jpeg`,
+            keywords: 'perla flor blanco trio tres grande'
         },
     ],
     combos:[
@@ -430,6 +498,27 @@ export const catalogDb = {
             name: 'Oceano',
             price: '$800',
             urlImg: `${import.meta.env.BASE_URL}images/shop/combos/oceano.jpeg`,
+            keywords: 'mar pez concha océano sirena cola agua'
+        },
+        {
+            id: '08',
+            name: 'Estrella mar Blanca Pulso',
+            price: '$1100',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/combos/estrella_mar_pulso_blanca.jpeg`,
+            keywords: 'mar pez concha océano sirena cola agua'
+        },
+        {
+            id: '09',
+            name: 'Estrella mar Azul Pulso',
+            price: '$1100',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/combos/estrella_mar_pulso_azul.jpeg`,
+            keywords: 'mar pez concha océano sirena cola agua'
+        },
+        {
+            id: '10',
+            name: 'Estrella de Mar Azul',
+            price: '$800',
+            urlImg: `${import.meta.env.BASE_URL}images/shop/combos/estrella_de_mar_azul.jpeg`,
             keywords: 'mar pez concha océano sirena cola agua'
         },
     ]
